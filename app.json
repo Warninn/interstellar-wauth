@@ -1,7 +1,5 @@
 {
-    "name": "edu",
-    "description": "?",
-    "repository": "https://github.com/interstellarnetwork/interstellar",
+    "description": "educational content",
+    "repository": "https://github.com/Zohran14/interstellar-fork",
     "logo": "https://avatars.githubusercontent.com/u/103917385",
-    "keywords": ["school", "math"]
   }
