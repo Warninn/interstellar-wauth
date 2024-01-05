@@ -3,13 +3,17 @@ import http from 'node:http';
 import { createBareServer } from "@tomphttp/bare-server-node";
 import path from 'node:path';
 import cors from 'cors';
+import basicAuth from 'express-basic-auth'
 
 const __dirname = process.cwd();
 const server = http.createServer();
 const app = express(server);
 const bareServer = createBareServer('/outerspace/');
 const PORT = 8080;
-
+app.use(basicAuth({
+  challenge: true,
+  users: { '1712132': 'abcd' },
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
